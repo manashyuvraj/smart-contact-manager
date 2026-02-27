@@ -10,12 +10,13 @@ import java.util.*;
 @NoArgsConstructor
 @Builder
 @Entity
+@ToString
 public class User {
     @Id
     @Column(name = "user_id")
-    private int userid;
+    private String userid;
     @Column(name = "user_name", nullable = false)
-    private String userName;
+    private String name;
     @Column(unique = true , nullable = false, name = "user_email")
     private String email;
     @Column(name = "user_password", nullable = false)

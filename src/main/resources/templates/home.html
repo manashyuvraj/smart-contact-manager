@@ -6,7 +6,7 @@
     <title>home</title>
   </head>
   <body>
-    <div id="content">
+    <div id="content" th:fragment="navbar">
       <nav
         class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default"
       >
@@ -30,12 +30,15 @@
           <div
             class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
           >
+
+          <a th:href="@{/register}">
             <button
               type="button"
-              class="text-white bg-gray-800 hover:bg-gray-900 cursor-pointer box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-full text-sm px-3 py-2 focus:outline-none"
+              class="text-white bg-gray-700 hover:bg-gray-900 cursor-pointer box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-full text-sm px-3 py-2 focus:outline-none"
             >
               Login/Signup
             </button>
+            </a>
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"

@@ -1,25 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" th:replace="~{base::parent(~{::title},~{::#content})}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>register</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="content">
+        <div class="grid grid-cols-12">
+          <div class="col-span-4"></div>
+            <div class="col-span-4">
+              <form th:action="@{/registered}" 
+              method="post"
+              th:object="${userForm}"
+              >
 
-<div id="content">
+                <!--signup card-->
+                <div
+                  class="mt-5 col-span-4 w-100 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs hover:bg-neutral-secondary-medium"
+                >
+                  <h1 class="text-2xl font-bold">Signup Here</h1>
 
-    <div class="grid grid-cols-12">
-        <div class="col-span-4"></div>
-        <div class="mt-20 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs hover:bg-neutral-secondary-medium col-span-4">
-            <h1 class="text-2xl font-bold">Signup Here</h1>
+                  <!--username-->
+                  <div class="mb-5 mt-6">
+                    <label
+                      for="username"
+                      class="block mb-2.5 text-sm font-medium text-heading"
+                      >Username :</label
+                    >
+                    <input
+                      type="text"
+                      id="username"
+                      th:field="*{name}"
+                      class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                      placeholder="Enter username"
+                      required
+                    />
+                  </div>
+
+                  <!--email-->
+                  <div class="mb-5 mt-6">
+                    <label
+                      for="email"
+                      class="block mb-2.5 text-sm font-medium text-heading"
+                      >Email :</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      th:field="*{email}"
+                      class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                      placeholder="abc@gmail.com"
+                      required
+                    />
+                  </div>
+
+                  <!--password-->
+                  <div class="mb-5 mt-6">
+                    <label
+                      for="password"
+                      class="block mb-2.5 text-sm font-medium text-heading"
+                      >Password :</label
+                    >
+                    <input
+                      type="password"
+                      id="password"
+                      th:field="*{password}"
+                      class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                      placeholder="Enter password"
+                      required
+                    />
+                  </div>
+
+                  <!--phone number-->
+                  <div class="mb-5 mt-6">
+                    <label
+                      for="phone number"
+                      class="block mb-2.5 text-sm font-medium text-heading"
+                      >Phone number :</label
+                    >
+                    <input
+                      type="tel"
+                      id="phonenumber"
+                      th:field="*{phoneNumber}"
+                      class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                      placeholder="Enter phone nunmber"
+                      required
+                    />
+                  </div>
+
+                  <!--about-->
+                  <div>
+                    <label
+                      for="about"
+                      class="block mb-2.5 text-sm font-medium text-heading"
+                      >about :</label
+                    >
+                    <textarea
+                      id="about"
+                      rows="4"
+                      th:field="*{about}"
+                      class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body"
+                      placeholder="write something about yourself"
+                    ></textarea>
+                  </div>
+
+                  <!--submit button-->
+                  <div>
+                    <center>
+                      <button
+                        type="submit"
+                        class="mt-6 text-white bg-blue-800 hover:bg-blue-900 box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none"
+                      >
+                        SUBMIT
+                      </button>
+                    </center>
+                  </div>
+                </div>
+              </form>
+            </div>
+          <div class="col-span-4"></div>
         </div>
-        <div class="col-span-4"></div>
-
     </div>
-    
-</div>
-    
-</body>
+  </body>
 </html>
-
