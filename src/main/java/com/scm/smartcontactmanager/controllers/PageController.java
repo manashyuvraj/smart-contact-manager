@@ -3,6 +3,7 @@ package com.scm.smartcontactmanager.controllers;
 import com.scm.smartcontactmanager.entities.User;
 import com.scm.smartcontactmanager.forms.UserForm;
 import com.scm.smartcontactmanager.services.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
