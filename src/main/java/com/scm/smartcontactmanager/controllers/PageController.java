@@ -51,9 +51,10 @@ public class PageController {
                 .password(userForm.getPassword())
                 .phoneNumber(userForm.getPhoneNumber())
                 .about(userForm.getAbout())
+                .enabled(true)
                 .build();
         userService.saveUser(newUser);
         System.out.println(newUser);
-        return "redirect:/home";
+        return "redirect:/login";
     }
 }
