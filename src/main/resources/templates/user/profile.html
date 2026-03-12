@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base::parent(~{::title},~{::#content})}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile</title>
+    <title th:text="${loggedInUser.name} + ' SCM'">profile</title>
 </head>
 <body>
-    <h1>welcome to the profile page</h1>
+    <div id="content">
+        
+        <div th:replace="~{user/user_navbar::navbar}"></div>
+    </div>
 </body>
 </html>
